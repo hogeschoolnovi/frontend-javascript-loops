@@ -3,8 +3,15 @@
 // Schrijf een script dat iedere naam in bovenstaande array vervangt door een koosnaampje, door er -"je" achter te plakken.
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 namen zou bevatten!
 // ==========================================
-
 const names = ["Henk", "Piet", "Fred", "Joop"];
+
+console.log(names)
+
+for (let i = 0; i < names.length; i++) {
+    names[i] = names[i] + "je";
+}
+
+console.log(names)
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -18,8 +25,15 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Schrijf een script dat ieder getal in bovenstaande array met 3 vermenigvuldigd.
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
-
 const numbers = [2, 4, 5, 29, 38];
+
+console.log(numbers)
+
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i] = numbers[i] *= 3;
+}
+
+console.log(numbers)
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -34,8 +48,15 @@ const numbers = [2, 4, 5, 29, 38];
 // Het volume is lengte x breedte x hoogte
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
-
 const squares = [30, 2, 8, 24, 11];
+
+console.log(squares);
+
+for (let i = 0; i < squares.length; i++) {
+    squares[i] = squares[i] * squares[i] * squares[i];
+}
+
+console.log(squares);
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
