@@ -6,6 +6,9 @@
 // Hoera!
 // ==========================================
 
+for (let i = 1; i <= 3; i++) {
+  console.log("Hoera");
+}
 
 
 // ==========================================
@@ -18,7 +21,13 @@
 // klaar!
  // ==========================================
 
-
+for (let i = 1; i <= 5; i++) {
+  if (i < 5) {
+    console.log("loop...");
+  } else {
+    console.log("klaar!");
+  }
+}
 
 // ==========================================
 // Opdracht 3. Maak een for-loop die van 0 tot 15 loopt. Voor ieder getal wordt in de console gelogd of het getal even of oneven is.
@@ -33,6 +42,17 @@
 // Tip: een getal is oneven als je het door 2 deelt en er blijft nog iets over. Een getal is even als je het deelt door 2 en er blijft niets over..
 // ==========================================
 
+// Feedback: er wordt dus geloopt van 0 tot EN MET 15.
+
+for (let i = 0; i <= 15; i++) {
+  if (i % 2 === 0) {
+    console.log(i, "is even");
+  } else {
+    console.log(i, "is oneven");
+  }
+  // of:
+  console.log(i, "is", (i % 2 === 0 ? "even" : "oneven"));
+}
 
 
 // ==========================================
@@ -50,3 +70,7 @@
 // >> 9
 // ==========================================
 
+for (let i = 0; i <= 8; i++) {
+  const prefix = ">".repeat(i  / 3);
+  console.log(prefix, i);
+}
