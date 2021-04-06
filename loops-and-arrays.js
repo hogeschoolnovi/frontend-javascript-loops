@@ -5,6 +5,9 @@
 // ==========================================
 
 const names = ["Henk", "Piet", "Fred", "Joop"];
+console.log(names);
+const koosnames = names.map(name => name + "je");
+console.log(koosnames);
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -20,6 +23,9 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // ==========================================
 
 const numbers = [2, 4, 5, 29, 38];
+const multiplied = numbers.map(n => n * 3);
+console.log(numbers);
+console.log(multiplied);
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -36,6 +42,9 @@ const numbers = [2, 4, 5, 29, 38];
 // ==========================================
 
 const squares = [30, 2, 8, 24, 11];
+const squared = squares.map(n => n * n * n);
+console.log(squares);
+console.log(squared);
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
