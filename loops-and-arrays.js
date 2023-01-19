@@ -12,7 +12,11 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
-
+for (let name of names) {
+  newName = name + 'je';
+  names[names.indexOf(name)] = newName;
+}
+console.log(names);
 
 
 // ==========================================
@@ -29,7 +33,14 @@ const numbers = [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
-
+for (const number of numbers) {
+  if (number % 2 === 0) {
+    numbers[numbers.indexOf(number)] = number * 2;
+  } else {
+    numbers[numbers.indexOf(number)] = number * 3;
+  }
+}
+console.log(numbers);
 
 
 // ==========================================
@@ -53,3 +64,8 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
 // ]
+for (const number of squares) {
+  squares[squares.indexOf(number)] = `Het volume van ${number} is ${number ** 3}`
+}
+
+console.log(squares);
