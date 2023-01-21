@@ -13,8 +13,7 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
 for (let name of names) {
-  newName = name + 'je';
-  names[names.indexOf(name)] = newName;
+  names[names.indexOf(name)] = name + 'je';
 }
 console.log(names);
 
@@ -34,11 +33,8 @@ const numbers = [2, 4, 5, 29, 38];
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
 for (const number of numbers) {
-  if (number % 2 === 0) {
-    numbers[numbers.indexOf(number)] = number * 2;
-  } else {
-    numbers[numbers.indexOf(number)] = number * 3;
-  }
+  const multiBy = number % 2 === 0 ? 2 : 3
+  numbers[numbers.indexOf(number)] = number * multiBy;
 }
 console.log(numbers);
 
