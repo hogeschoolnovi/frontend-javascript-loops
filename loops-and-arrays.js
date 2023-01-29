@@ -12,7 +12,12 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
-
+number = 0
+for (number in names){
+    names[number] = names[number]+"je"
+    number = number + 1
+}
+console.log(names)
 
 
 // ==========================================
@@ -29,8 +34,17 @@ const numbers = [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
-
-
+number = 0
+for (number in numbers) {
+    modulo = numbers[number] % 2
+if (modulo === 0) {
+    numbers[number] = numbers[number]* 2
+}
+else {
+    numbers[number] = numbers[number]* 3
+}
+}
+console.log(numbers)
 
 // ==========================================
 // Opdracht 3
@@ -53,3 +67,11 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
 // ]
+
+number = 0
+for (square in squares){
+    originalNumber = squares[number]
+    volumeNumber = squares[number] * originalNumber * originalNumber
+    console.log("Het volume van %d is %d", originalNumber, volumeNumber);
+    number = number + 1
+}
