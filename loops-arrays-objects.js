@@ -9,6 +9,10 @@ const scores = [
     {name: 'Rianne', score: 66, grade: null}
 ];
 
+for (const score of scores) {
+    console.log(score.score);
+}
+
 // Verwachtte uitkomsten:
 // 83
 // 77
@@ -32,7 +36,21 @@ const scores = [
 // D
 // ==========================================
 
-
+for (const score of scores) {
+    if (score.score < 60) {
+        console.log("F");
+    } else if (score.score < 70) {
+        console.log("D");
+    } else if (score.score < 80) {
+        console.log("C");
+    } else if (score.score < 90) {
+        console.log("B");
+    } else if (score.score < 100) {
+        console.log("A");
+    } else {
+        console.log(score.score)
+    }
+}
 
 
 
@@ -49,7 +67,21 @@ const scores = [
 //  ];
 // ==========================================
 
-
+for (let i = 0; i < scores.length; i++) {
+    let score = scores[i];
+    if (score.score < 60) {
+        scores[i] = {name: score.name, score: score.score, grade: "F"};
+    } else if (score.score < 70) {
+        scores[i] = {name: score.name, score: score.score, grade: "D"};
+    } else if (score.score < 80) {
+        scores[i] = {name: score.name, score: score.score, grade: "C"};
+    } else if (score.score < 90) {
+        scores[i] = {name: score.name, score: score.score, grade: "B"};
+    } else {
+        scores[i] = {name: score.name, score: score.score, grade: "A"};
+    }
+}
+console.log(scores);
 
 
 
@@ -75,7 +107,15 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
-
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    const emp = NOVIEmployees[i];
+    NOVIEmployees[i] = {
+        firstName: emp.firstName,
+        lastName: emp.lastName,
+        email: emp.firstName + "." + emp.lastName + "@novi.nl"
+    };
+}
+console.log(NOVIEmployees);
 
 
 
@@ -84,8 +124,24 @@ const NOVIEmployees = [
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
+console.log("Opdracht 2-BONUS");
+const NOVIEmployees2 = [
+    {firstName: 'Nova', lastName: 'Eeken'},
+    {firstName: 'Sam', lastName: 'Barnhoorn'},
+    {firstName: 'Tessa', lastName: 'Steur'},
+    {firstName: 'Mark', lastName: 'Rensen'},
+];
 
-
+const res = [];
+for (let i = 0; i < NOVIEmployees2.length; i++) {
+    const emp = NOVIEmployees2[i];
+    res.push({
+        firstName: emp.firstName,
+        lastName: emp.lastName,
+        email: emp.firstName.toLowerCase() + '.' + emp.lastName.toLowerCase() + '@novi.nl'
+    });
+}
+console.log(res);
 
 // ==========================================
 // Opdracht 3
@@ -98,6 +154,14 @@ const NOVIEmployees = [
 //  3572 = Wittevrouwen
 //  3581 = Oudwijk
 //  3583 = Schildersbuurt
+const map = new Map();
+map.set("3513", "Pijlsweerd");
+map.set("3514", "Vogelenbuurt");
+map.set("3512", "Binnenstad");
+map.set("3531", "Lombok");
+map.set("3572", "Wittevrouwen");
+map.set("3581", "Oudwijk");
+map.set("3583", "Schildersbuurt");
 
 const students = [
     {name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: null},
@@ -113,6 +177,17 @@ const students = [
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
     {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
 ];
+
+for (let i = 0; i < students.length; i++) {
+    const stud = students[i];
+    students[i] = {
+        name: stud.name,
+        city: stud.city,
+        zipCode: stud.zipCode,
+        neighborhood: map.get(stud.zipCode)
+    };
+}
+console.log(students);
 
 // Verwachte uitkomsten:
 // [
@@ -131,5 +206,4 @@ const students = [
 // ]
 // ==========================================
 
-
-
+// PS: van de neighborhood in de verwachte uitkomsten klopt niet alles...
